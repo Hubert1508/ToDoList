@@ -12,15 +12,15 @@ addButton.onclick = function(){
 
     const inputValue = document.getElementById("text").value;
 
-    allQuantity++;
-    activeQuentity++;
-
     if(inputValue===""){
 
         alert("Wpisz nowe zadanie");
 
         return false;
     }
+
+    allQuantity++;
+    activeQuentity++;
 
     const newDiv = document.createElement("div");
 
@@ -107,7 +107,7 @@ openNav.onclick = function(){
 
     setTimeout(() => {
         result.innerHTML=""
-    }, 3000);
+    }, 2000);
   }
 
   const activeTasks = document.getElementById("activeTasks");
@@ -118,7 +118,7 @@ openNav.onclick = function(){
 
     setTimeout(() => {
         result.innerHTML=""
-    }, 3000);
+    }, 2000);
 
   }
 
@@ -130,6 +130,6 @@ openNav.onclick = function(){
 
     setTimeout(() => {
         result.innerHTML=""
-    }, 3000)
+    }, 2000)
 
   }
