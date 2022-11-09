@@ -1,0 +1,164 @@
+body{
+    background-color: rgb(63, 62, 62);
+    display: flex;
+    flex-direction: column;
+   font-family: 'Kaushan Script', cursive;
+}
+
+h1{
+    color: #202c2d;
+    text-shadow: 0 1px #808d93,
+     -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5,
+     -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, 
+     -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5, 
+     -5px 6px #808d93, -6px 5px #cdd2d5, -6px 7px #808d93, 
+     -7px 6px #cdd2d5, -7px 8px #808d93, -8px 7px #cdd2d5;
+}
+
+.addSection{
+    margin-top: 2em;
+    background-color: rgb(43, 49, 47);
+    width: 100%;
+    height: 25vw;
+    font-size: 2vw;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+}
+
+#text{
+    font-size: 2vw;
+    border-radius: 20px;
+    width: 50vw;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    border: none;
+    font-family: 'Kaushan Script', cursive;
+    background-color: #acacac;
+}
+
+#text:focus{
+    outline: none;
+    -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+    background: #ECEFCF;
+    transition: 1s;
+}
+
+.button{
+    font-size: 2vw;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    font-family: 'Kaushan Script', cursive;
+    transition: .5s;
+    background-color: #acacac;
+}
+
+.button:hover{
+    -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+    background: #ECEFCF;
+}
+
+.jobDone{
+    cursor: pointer;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    transition: .5s;
+    font-size: 2em;
+}
+
+.jobDone:hover{
+    color: white;
+}
+
+p{
+    font-size: 2em;
+}
+
+.option{
+    cursor: pointer;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    transition: .1s;
+    font-size: 2em;
+    opacity: 0;
+}
+
+.option:hover{
+    color: white;
+}
+
+.result{
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    transition: .1s;
+    font-size: 2em;
+    color: white;
+    opacity: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 1s;
+    padding-top: 60px;
+    text-align: center;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    font-family: 'Kaushan Script', cursive;
+    transition: .5s;
+  }
+  
+  .openbtn:hover {
+    -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 15px 5px rgba(0,0,0,0);
+    background: #ECEFCF;
+    color: black;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
