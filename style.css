@@ -2,7 +2,8 @@ body{
     background-color: rgb(63, 62, 62);
     display: flex;
     flex-direction: column;
-   font-family: 'Kaushan Script', cursive;
+    font-family: 'Gruppo', cursive;
+    font-weight: bolder;
 }
 
 h1{
@@ -17,15 +18,17 @@ h1{
 
 .addSection{
     margin-top: 2em;
-    background-color: rgb(43, 49, 47);
+    /*background-color: rgb(43, 49, 47);*/
+    background: linear-gradient(to bottom, #787878 0%, #141414 50%, #5E5E5E 100%);
     width: 100%;
     height: 25vw;
     font-size: 2vw;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 40px 0px 40px 0px;
     -webkit-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
     -moz-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
     box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
+    border-top: 2px outset;
 }
 
 #text{
@@ -36,7 +39,8 @@ h1{
     -moz-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
     box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
     border: none;
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Gruppo', cursive;
+    font-weight: bolder;
     background-color: #acacac;
 }
 
@@ -56,7 +60,8 @@ h1{
     -webkit-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
     -moz-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
     box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Gruppo', cursive;
+    font-weight: bolder;
     transition: .5s;
     background-color: #acacac;
 }
@@ -85,21 +90,13 @@ p{
 .option{
     cursor: pointer;
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-    transition: .1s;
+    transition: 1s;
     font-size: 2em;
     opacity: 0;
 }
 
 .option:hover{
     color: white;
-}
-
-.result{
-    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-    transition: .1s;
-    font-size: 2em;
-    color: white;
-    opacity: 0;
 }
 
 .sidebar {
@@ -109,7 +106,7 @@ p{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background: linear-gradient(135deg, #787878 0%, #141414 50%, #5E5E5E 100%);
     overflow-x: hidden;
     transition: 1s;
     padding-top: 60px;
@@ -120,7 +117,7 @@ p{
     color: #f1f1f1;
   }
   
-  .sidebar .closebtn {
+  .closebtnMenu {
     position: absolute;
     top: 0;
     right: 25px;
@@ -129,11 +126,26 @@ p{
     cursor: pointer;
     text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
   }
+
+  .closebtn {
+    position: absolute;
+    margin-top: -17%;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    transition: .5s;
+  }
+
+  .closebtn:hover{
+    color: white;
+  }
   
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background: linear-gradient(135deg, #787878 0%, #141414 50%, #5E5E5E 100%);
     color: white;
     padding: 10px 15px;
     border: none;
@@ -141,7 +153,8 @@ p{
     -webkit-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
     -moz-box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
     box-shadow: 8px 8px 24px 0px rgba(155, 20, 218, 1);
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Gruppo', cursive;
+    font-weight: bolder;
     transition: .5s;
   }
   

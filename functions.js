@@ -1,12 +1,6 @@
 const addButton = document.getElementById("add");
 
-let allQuantity = 0;
-let activeQuentity = 0;
-let completedQuantity = 0;
-
-
-const result = document.getElementById("result");
-result.style.color = "white";
+let checkState = true;
 
 addButton.onclick = function(){
 
@@ -14,13 +8,10 @@ addButton.onclick = function(){
 
     if(inputValue===""){
 
-        alert("Wpisz nowe zadanie");
+        alert("Enter a new task");
 
         return false;
     }
-
-    allQuantity++;
-    activeQuentity++;
 
     const newDiv = document.createElement("div");
 
@@ -30,10 +21,15 @@ addButton.onclick = function(){
 
     const tagP = document.createElement("p");
 
+    const closeBtn = document.createElement("a");
+
     newDiv.appendChild(tagH);
     newDiv.appendChild(tagP);
-
+    newDiv.appendChild(closeBtn);
     
+    closeBtn.innerHTML = "x";
+    closeBtn.setAttribute("class", "closebtn")
+    closeBtn.style.visibility = "hidden";
 
     // Create a text node:
     const createNewText = document.createTextNode(inputValue);
@@ -58,9 +54,12 @@ addButton.onclick = function(){
 
         tagP.style.textDecoration = "line-through";
         tagP.removeAttribute("class", "jobDone");
-        newDiv.style.opacity = "0.3";    
-        activeQuentity--;
-        completedQuantity++;
+        tagP.style.opacity = "0.3";    
+        closeBtn.style.visibility = "visible";
+    }
+
+    closeBtn.onclick = function(){
+        newDiv.remove();
     }
 }
 
@@ -77,7 +76,7 @@ openNav.onclick = function(){
             option[i].style.opacity = "10";
         }
 
-        },700);
+        },600);
 
     document.getElementById("mySidebar").style.width = "350px";
 
@@ -103,33 +102,20 @@ openNav.onclick = function(){
 
   allTasks.onclick = function(){
 
-    result.innerHTML = allQuantity;
-
-    setTimeout(() => {
-        result.innerHTML=""
-    }, 2000);
+   
   }
 
   const activeTasks = document.getElementById("activeTasks");
 
   activeTasks.onclick = function(){
 
-    result.innerHTML = activeQuentity;
-
-    setTimeout(() => {
-        result.innerHTML=""
-    }, 2000);
-
+    
   }
 
   const completedTasks = document.getElementById("completedTasks");
 
   completedTasks.onclick = function(){
 
-    result.innerHTML = completedQuantity;
-
-    setTimeout(() => {
-        result.innerHTML=""
-    }, 2000)
+   
 
   }
