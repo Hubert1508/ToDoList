@@ -134,10 +134,17 @@ addButton.onclick = function(){
   clearDoneTasks.onclick = function(){
 
     const sectionDone = document.querySelectorAll(".filterDoneTask");
+    const sectionActive = document.querySelectorAll(".addSection");
 
     for (let i = 0; i < sectionDone.length; i++){
 
         sectionDone[i].remove();
+
+        for (let i = 0; i < sectionActive.length; i++){
+
+            sectionActive[i].style.opacity = "10";
+
+        }
 
     }
   }
