@@ -3,6 +3,16 @@ const addButton = document.getElementById("add");
 let checkStateCompleted;
 let checkStateActive;
 
+let counter = 0;
+
+const taskCounter = document.getElementById("task-counter");
+
+window.onload = function(){
+    if(counter===0){
+        taskCounter.innerHTML = "You have no task to do";
+    }
+}
+
 addButton.onclick = function(){
 
     const inputValue = document.getElementById("text").value;
@@ -16,6 +26,8 @@ addButton.onclick = function(){
     }
 
     checkStateActive = true;
+
+    counter++;
 
     const newDiv = document.createElement("div");
 
@@ -59,7 +71,21 @@ addButton.onclick = function(){
 
         newDiv.setAttribute("class", "filterDoneTask");
 
+        counter--;
+
+        if(counter===0){
+
+            taskCounter.innerHTML = "You have no task to do";
+            
+        }else{
+
+            taskCounter.innerHTML ="Tasks to do: " + counter;
+
+        }
+
     }
+
+    taskCounter.innerHTML ="Tasks to do: " + counter;
 
     const allTasks = document.getElementById("allTasks");
 
@@ -95,6 +121,7 @@ addButton.onclick = function(){
         for (let i = 0; i < sectionDone.length; i++){
 
             sectionDone[i].style.opacity = "0";
+            sectionDone[i].style.transition = "2s";
 
             for (let i = 0; i < sectionActive.length; i++){
 
@@ -122,6 +149,7 @@ addButton.onclick = function(){
             for (let i = 0; i < sectionActive.length; i++){
 
                 sectionActive[i].style.opacity = "0";
+                sectionActive[i].style.transition = "2s";
     
             }
 
